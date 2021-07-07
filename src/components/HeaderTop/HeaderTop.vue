@@ -14,7 +14,6 @@ import Location from '@/components/Location/Location'
 
 export default {
   name: "HeaderTop",
-  props: ["title"],
   components: {
     Location
   }

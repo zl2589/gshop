@@ -51,6 +51,7 @@ export default {
   justify-content: space-around;
   align-items center
   border-top 1px solid #ddd
+  padding-top: 5px;
   .foot {
     display flex
     flex 1
