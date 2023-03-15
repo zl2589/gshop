@@ -9,6 +9,8 @@ import  'element-ui/lib/theme-chalk/index.css'
 
 import './common/stylus/index.styl'
 
+import './mock/mockServer'
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)

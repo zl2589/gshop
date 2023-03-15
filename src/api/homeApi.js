@@ -1,4 +1,5 @@
 import request from './request'
+import ajax from './ajax'
 
 export const homeApi = {
     getCategorys() {
@@ -12,6 +13,6 @@ export const homeApi = {
             url: '/api/home/shops',
             method: 'post',
         })
-    }
+    },
 }
 

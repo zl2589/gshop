@@ -1,5 +1,6 @@
 import * as types from './mutation-types'
 import { homeApi } from '../api/homeApi'
+import { mockApi } from '../api/mockRequest'
 
 export default {
    async getCategorys({ commit }) {
@@ -19,4 +20,39 @@ export default {
          sessionStorage.removeItem('username')
       }
    },
+
+
+
+
+   // data.json
+   async getShopGoods({commit}, callback) {
+      const result = await mockApi.reqShopGoods()
+      console.log('goods', result)
+      if (result.code === 0) {
+        const goods = result.data
+        commit(types.GET_GOODS, {goods})
+      }
+    },
+   async getShopRatings({commit}, callback) {
+      const result = await mockApi.reqShopRatings()
+      console.log('ratings', result)
+      if (result.code === 0) {
+        const ratings = result.data
+        commit(types.GET_RATINGS, {ratings})
+      }
+    },
+    async getShopInfo({commit}, shopId) {
+      let result = await mockApi.reqShopInfo()
+      console.log('info', result)
+      if (result.code === 0) {
+         const info = result.data
+         commit(types.GET_INFO, info)
+      }
+   },
+    
+
+
+
+
+
 }

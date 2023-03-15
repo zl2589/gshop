@@ -23,7 +23,7 @@ export default {
       let _that = this;
       let geolocation = location.initMap("map-container"); //定位
       AMap.event.addListener(geolocation, "complete", (result) => {
-        console.log(result.addressComponent);
+        // console.log(result.addressComponent);
         _that.lat = result.position.lat;
         _that.lng = result.position.lng;
         _that.province = result.addressComponent.province;

@@ -4,8 +4,8 @@
       <i class="iconfont icon-xuanxiang"></i>
       <span>附近商家</span>
     </div>
-    <ul class="near-business" v-if="shops.length > 0">
-      <li v-for="(shop, index) in shops" :key="index">
+    <ul class="near-business" v-if="shops">
+      <li v-for="(shop, index) in shops" :key="index" @click="shopIndex(shop.id)">
         <div class="left">
           <div class="left-img-box">
             <img :src="require('../../assets/shop/shop_img/' + shop.shop_img)" alt="" v-if="shop.shop_img"/>
@@ -72,6 +72,11 @@ export default {
     ...mapState(['shops']),
 
   },
+  methods: {
+    shopIndex(shopId) {
+      this.$router.push({name: 'shop', params: {shopId,}})
+    }
+  }
 
 }
 </script>
@@ -80,9 +85,9 @@ export default {
 @import "../../common/stylus/mixins.styl"
 
 .home-content {
-  height: 400px;
   margin-top: 10px;
   background: #fff;
+  max-height: 370px;
 
   .content-title {
     text-align: left;

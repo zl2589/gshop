@@ -10,6 +10,15 @@ const mutations = {
     [types.GET_USER_INFO](state, userInfo) {
         state.userInfo = userInfo
     },
+    [types.GET_GOODS](state, goods) {
+        state.goods = goods
+    },
+    [types.GET_RATINGS](state, ratings) {
+        state.ratings = ratings
+    },
+    [types.GET_INFO](state, info) {
+        state.info = info
+    },
 }
 
 export default mutations

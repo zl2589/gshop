@@ -5,6 +5,10 @@ import store from '../store'
 
 Vue.use(Router)
 
+import ShopGoods from '../views/Shop/ShopGoods/ShopGoods.vue'
+import ShopInfo from '../views/Shop/ShopInfo/ShopInfo.vue'
+import ShopRatings from '../views/Shop/ShopRatings/ShopRatings.vue'
+
 const routes = [
   {
     path: '/',
@@ -39,6 +43,25 @@ const routes = [
     path: '/mine',
     name: 'mine',
     component: () => import('../views/Mine/mine.vue')
+  },
+  {
+    path: '/shop',
+    name: 'shop',
+    component: () => import('../views/Shop/Shop.vue'),
+    children: [
+      {
+        path: '/shop/goods',
+        component: ShopGoods 
+      },
+      {
+        path: '/shop/ratings',
+        component: ShopRatings 
+      },
+      {
+        path: '/shop/info',
+        component: ShopInfo
+      },
+    ]
   },
 ]
 

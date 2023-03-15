@@ -102,11 +102,11 @@ export default {
 <style lang="stylus">
 .home {
   .home-swiper {
-    margin-top: 50px;
     bottom-border-1px(#e4e4e4)
     margin-top 45px
-    height 200px
+    // height 200px
     background #fff
+    padding-bottom 5px
 
     .swiper-container {
       width 100%
@@ -123,7 +123,7 @@ export default {
 
           .link_to_food {
             width 25%
-
+            padding-bottom 20px
             img {
               display inline-block
               width 50px
@@ -141,6 +141,7 @@ export default {
         }
       }
       .swiper-pagination {
+        bottom 2px
         span.swiper-pagination-bullet-active {
           background #02a774
         }   

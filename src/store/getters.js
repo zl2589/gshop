@@ -5,6 +5,9 @@ const getter = {
     userInfo: state => {
         return state.userInfo || sessionStorage.getItem('username')
     },
+    goods: state => state.goods,
+    ratings: state => state.ratings,
+    info: state => state.info,
 }
 
 export default getter
